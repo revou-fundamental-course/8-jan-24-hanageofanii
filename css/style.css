@@ -1,0 +1,40 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header{
+    text-align: center;
+}
+
+header h1{
+    color: #3A4d39;
+    background-color: #b0beaf;
+}
+
+header h4{
+    margin-top: 32px;
+    color: #3A4d39;
+}
+
+header p{
+    margin-top: 0px;
+    font-size: x-small;
+    color: #739072;
+    margin-bottom: 20px;
+}
+
+.input-section{
+display: flex;
+flex-direction: column;
+}
+#squareSide{
+    margin-top: 20px ;
+    outline: none;
+    border-radius: 8px;
+    border: solid #739072;
+    padding: 10px;
+}
+
+#squareSide:focus{
+    border: solid #1e271e;
+}
