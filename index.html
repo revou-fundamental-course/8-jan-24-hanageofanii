@@ -3,20 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katik Bangun Datar</title>
+    <title>Kalkulator Bangun Datar</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <div id="leaves">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i> 
+      </div>
+
     <header>
-        <h1>Kalkulator Luas daan Keliling Bangun Datar</h1>
-        <h4>Welcome to Kalkulator Luas dan Keliling Persegi</h4>
-        <p>Web ini dapat digunakan untuk menghitung bangun ruang</p>
+        <h1>Kalkulator Luas dan Keliling Bangun Datar</h1>
+        <h4>Welcome to Kalkulator Luas dan Keliling</h4>
+        <p>Web ini dapat digunakan untuk menghitung bangun datar</p>
     </header>
 
     <div class="input-section">
-        <label for="squareSide" id="labelSquareSide">Hitung Luas Persegi</label>
-        <input type="number" id="squareSide">
+        <label for="shapeSelect">Pilih Bangun Datar:</label>
+        <select id="shapeSelect">
+            <option value="square">Persegi</option>
+            <option value="rectangle">Persegi Panjang</option>
+            <option value="circle">Lingkaran</option>
+            <option value="triangle">Segitiga</option>
+            <!-- Add more options for other shapes -->
+        </select>
 
+        <div id="dimensionsInput">
+            <!-- Initially show only one input for the default shape -->
+            <label for="dimension">Side:</label>
+            <input type="number" id="dimension" placeholder="Enter side" required="true">
+        </div>
+
+        <div class="calculation-options">
+            <label for="area">Luas:</label>
+            <input type="radio" name="calculation" value="area" checked>
+
+            <label for="perimeter">Keliling:</label>
+            <input type="radio" name="calculation" value="perimeter">
+        </div>
+
+        <div class="button-group">
+            <button onclick="calculate()">Hitung</button>
+            <button onclick="resetValues()">Reset</button>
+        </div>
     </div>
+
+    <div class="result-section">
+        <h2>Hasil Perhitungan</h2>
+        <p id="result"></p>
+
+        <div class="shape-info">
+            <h3>Rumus:</h3>
+            <p id="formulaLabel"></p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+    
 </body>
 </html>
